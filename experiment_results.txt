@@ -1,0 +1,59 @@
+EXPERIMENT A: Balanced workload
+
+== FIFO simulation ==
+1000 tasks, 70% IO / 30% CPU, 8 workers, cap 100%
+— results —
+total runtime          : 21867 ms
+makespan               : 21867 ms
+tasks completed        : 1000 (IO=701, CPU=299)
+avg wait time          : 10659.82 ms
+avg turnaround time    : 10833.75 ms
+max wait time          : 21557 ms
+avg CPU usage          : 182.07 %
+avg workers active     : 7.95 / 8
+monitor samples        : 2162
+monitor csv            : monitor_log.csv
+
+== Optimized simulation ==
+1000 tasks, 70% IO / 30% CPU, 8 workers, cap 100%
+— results —
+total runtime          : 21859 ms
+makespan               : 21859 ms
+tasks completed        : 1000 (IO=701, CPU=299)
+avg wait time          : 9068.81 ms
+avg turnaround time    : 9242.74 ms
+max wait time          : 21554 ms
+avg CPU usage          : 182.19 %
+avg workers active     : 7.95 / 8
+monitor samples        : 2159
+monitor csv            : monitor_log.csv
+
+EXPERIMENT B: Stressed CPU-heavy workload
+
+== FIFO stressed simulation ==
+1000 tasks, 20% IO / 80% CPU, 8 workers, cap 100%
+— results —
+total runtime          : 33318 ms
+makespan               : 33318 ms
+tasks completed        : 1000 (IO=192, CPU=808)
+avg wait time          : 16421.43 ms
+avg turnaround time    : 16686.99 ms
+max wait time          : 33074 ms
+avg CPU usage          : 261.59 %
+avg workers active     : 7.97 / 8
+monitor samples        : 3292
+monitor csv            : monitor_log.csv
+
+== Optimized stressed simulation ==
+1000 tasks, 20% IO / 80% CPU, 8 workers, cap 100%
+— results —
+total runtime          : 33317 ms
+makespan               : 33317 ms
+tasks completed        : 1000 (IO=192, CPU=808)
+avg wait time          : 14758.72 ms
+avg turnaround time    : 15024.28 ms
+max wait time          : 33015 ms
+avg CPU usage          : 261.62 %
+avg workers active     : 7.97 / 8
+monitor samples        : 3296
+monitor csv            : monitor_log.csv
